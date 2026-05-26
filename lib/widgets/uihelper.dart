@@ -48,7 +48,7 @@ class Uihelper {
     );
   }
 
-   void showdialogue(
+  static void showdialogue(
     BuildContext context, {
     required String title,
     required String content1,
