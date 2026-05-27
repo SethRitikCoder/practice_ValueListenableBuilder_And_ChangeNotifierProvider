@@ -62,7 +62,8 @@ class Uihelper {
       builder: (context) {
         return AlertDialog(
           title: Text(title),
-          content: ListBody(
+          content:Column(
+            mainAxisSize: MainAxisSize.min,
             children: [Text(content1), SizedBox(height: 10), Text(content2)],
           ),
           actions: [

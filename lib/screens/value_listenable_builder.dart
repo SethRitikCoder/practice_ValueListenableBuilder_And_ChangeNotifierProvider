@@ -82,6 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Uihelper.customIconElevatedButton(
                 callback: () {
+                  ScaffoldMessenger.of(context).hideCurrentMaterialBanner();
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -115,9 +116,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void callback() async {
-    await Future.delayed(Duration(seconds: 2));
-
-    if (!mounted) return;
+    await Future.delayed(Duration(seconds: 2),(){
+      if (!mounted) return;
     ScaffoldMessenger.of(context).showMaterialBanner(
       MaterialBanner(
         padding: EdgeInsets.all(20),
@@ -138,6 +138,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
     );
+    });
+
+    
     // Future.delayed(Duration(seconds: 5));
     // ScaffoldMessenger.of(context).clearMaterialBanners();
   }

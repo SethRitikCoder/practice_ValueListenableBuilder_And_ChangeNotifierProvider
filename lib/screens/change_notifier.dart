@@ -1,3 +1,4 @@
+import 'package:change_notifier_learnt/screens/lottie_animation.dart';
 import 'package:change_notifier_learnt/text_provider.dart';
 import 'package:change_notifier_learnt/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
@@ -38,6 +39,16 @@ class _MyChangeNotifierPageState extends State<MyChangeNotifierPage> {
                 Provider.of<TextProvider>(context, listen: false).changeText();
               },
               buttonName: "change the data",
+            ),
+            Uihelper.customIconElevatedButton(
+              callback: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyLottieAnimation()),
+                );
+              },
+              buttonName: "Go To Lottie Animation",
+              icon: Icon(Icons.forward),
             ),
           ],
         ),
