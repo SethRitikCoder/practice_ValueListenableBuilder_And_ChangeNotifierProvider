@@ -23,8 +23,24 @@ class _MyLottieAnimationState extends State<MyLottieAnimation> {
               width: 200,
               height: 200,
               backgroundLoading: true,
-              reverse: true,
-           
+              reverse: false,
+            ),
+            SizedBox(
+              width: 100,
+              height: 100,
+
+              child: Lottie.asset(
+                "assets/animation/loading.json",
+                animate: true,
+                repeat: true,
+              ),
+            ),
+            Lottie.asset(
+              "assets/animation/74158ba8-117d-11ee-813e-d32849ed9cda.json",
+              animate: true,
+              repeat: true,
+              width: 200,
+              height: 200,
             ),
           ],
         ),
